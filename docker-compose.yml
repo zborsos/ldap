@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  ldap_server:
+    image: zborsos/lightimage:0.0.1
+    environment:
+      LDAP_ADMIN_PASSWORD: test1234
+      LDAP_BASE_DN: dc=jazz,dc=net
+    ports:
+      - 389:389
+    volumes:
+      - /Users/zborsos/ldap:/var/lib/ldap_data
+      - /Users/zborsos/ldap/slapd.d:/var/lib/ldap_config
+  ldap_server_admin:
+    image: osixia/phpldapadmin:0.7.2
+    ports:
+      - 8090:80
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: ldap_server
+      PHPLDAPADMIN_HTTPS: 'false'
