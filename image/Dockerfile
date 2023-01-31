@@ -5,7 +5,7 @@ RUN apt -y update
 # Install slapd and ldap-utils
 RUN LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y slapd ldap-utils
 
-# Default configuration: can be overridden at the docker command line
+# Default configuration: can be overridden at the docker command line or in docker-compose
 ENV LDAP_ADMIN_PASSWORD test1234
 ENV LDAP_ORGANISATION IBM
 ENV LDAP_DOMAIN jazz.net

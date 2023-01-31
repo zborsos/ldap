@@ -1,0 +1,3 @@
+.DS_Store
+ldap_config/*.*
+ldap_data/*.*

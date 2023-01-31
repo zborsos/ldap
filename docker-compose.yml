@@ -1,15 +1,18 @@
 version: '3.9'
+#phpLDAPadmin page -- Login DN -- cn=admin,dc=jazz,dc=net
 services:
   ldap_server:
-    image: zborsos/lightimage:0.0.1
+    image: zborsos/ldap:0.0.1
+    build: ./image
     environment:
       LDAP_ADMIN_PASSWORD: test1234
       LDAP_BASE_DN: dc=jazz,dc=net
+      LDAP_ORGANISATION: IBM
     ports:
       - 389:389
     volumes:
-      - /Users/zborsos/ldap:/var/lib/ldap_data
-      - /Users/zborsos/ldap/slapd.d:/var/lib/ldap_config
+      - ./ldap_data:/var/lib/ldap
+      - ./ldap_config:/etc/ldap/slapd.d
   ldap_server_admin:
     image: osixia/phpldapadmin:0.7.2
     ports:
@@ -17,3 +20,6 @@ services:
     environment:
       PHPLDAPADMIN_LDAP_HOSTS: ldap_server
       PHPLDAPADMIN_HTTPS: 'false'
+volumes:
+  ldap_data:
+  ldap_config:
