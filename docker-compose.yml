@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.3'
 #phpLDAPadmin page -- Login DN -- cn=admin,dc=jazz,dc=net
 services:
   ldap_server:

@@ -1,0 +1,16 @@
+dn: uid=appd3,ou=uk,dc=appd,dc=com
+cn: Drake Smith3
+uid: appd3
+uidNumber: 3
+gidNumber: 10000
+sn: Smith3
+givenName: Lucas3
+mail: appd3@appd.com
+homeDirectory: /home/appd3
+loginShell: /bin/bash
+userPassword: test1234
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
