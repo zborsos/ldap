@@ -16,10 +16,10 @@ podman machine init
  and 
 podman machine start
 
-then 
+Staring the LDAP server
 cd theLdapCloneDirectory podman-compose -f ./docker-compose.yml up
 
-for 
+In your browser go to  
 localhost:8090
 username : cn=admin,dc=jazz,dc=net
 Passwd : test1234
