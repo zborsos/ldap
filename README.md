@@ -26,3 +26,7 @@ Passwd : test1234
 
 
 Stopping the LDAP podman-compose -f ./docker-compose.yml down
+
+Connecting to JAZZ server
+ - please see the pictures in the setupWithJazz folder
+
