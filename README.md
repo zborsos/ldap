@@ -3,8 +3,8 @@ Install Podman
 https://podman.io/docs/installation
 
 Install Podman extension :
-- [ ] Docker extension
-- [ ] Compose extension
+ - Docker extension
+ -  Compose extension
 
 get LDAP server from git by typing
 
