@@ -1,2 +1,4 @@
 .DS_Store
 .vscode
+ldap_data/lock.mdb
+
