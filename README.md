@@ -11,7 +11,7 @@ get LDAP server from git by typing
 git clone https://github.com/zborsos/ldap.git
 
 
-After restarting your machine you may ned to run :
+After restarting your machine you may need to run :
 podman machine init
  and 
 podman machine start
